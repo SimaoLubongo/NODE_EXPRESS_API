@@ -154,9 +154,9 @@ app.patch('/cart/:id', (req, res) => {
 
     const cart = cartSummary.find((cart) => cart.id == id);
 
-    if (numItems) cartSummary.numItems = numItems;
-    if (itemDescription) cartSummary.itemDescription = itemDescription;
-    if (address) cartSummary.address = address;
+    if (numItems) cart.numItems = numItems;
+    if (itemDescription) cart.itemDescription = itemDescription;
+    if (address) cart.address = address;
 
     res.send(`Cart number ${id} has been updated from the database!`);
 });
@@ -204,9 +204,9 @@ app.patch('/delivery/:id', (req, res) => {
 
     const delivery = deliveryDetails.find((delivery) => delivery.id == id);
 
-    if (firstName) deliveryDetails.firstName = firstName;
-    if (lastName) deliveryDetails.lastName = lastName;
-    if (address) deliveryDetails.address = address;
+    if (firstName) delivery.firstName = firstName;
+    if (lastName) delivery.lastName = lastName;
+    if (address) delivery.address = address;
 
     res.send(`Delivery details for ${id} has been updated from the database!`);
 });
