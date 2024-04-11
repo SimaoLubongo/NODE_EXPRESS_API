@@ -106,7 +106,7 @@ app.patch('/category/:id', (req, res) => {
     const category = categories.find((category) => category.id == id);
 
     if (categoryName) category.categoryName = categoryName;
-    if (image) category.image = image;
+
 
     res.send(`Category with the id ${id} has been updated from the database!`);
 });
