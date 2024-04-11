@@ -214,4 +214,7 @@ app.patch('/delivery/:id', (req, res) => {
 //Start server
 app.listen(PORT, () => {
     console.log(`Server running on port http://localhost:${PORT}`);
-});
+})
+
+module.exports = app;
+
