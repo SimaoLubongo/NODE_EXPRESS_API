@@ -101,7 +101,7 @@ app.delete('/category/:id', (req, res) => {
 //PATCH request to /category/:id endpoint to update a category using a particular id
 app.patch('/category/:id', (req, res) => {
     const { id } = req.params;
-    const { categoryName, image } = req.body;
+    const { categoryName } = req.body;
 
     const category = categories.find((category) => category.id == id);
 
